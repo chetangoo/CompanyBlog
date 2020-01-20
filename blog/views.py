@@ -10,11 +10,11 @@ from django.views.generic import (TemplateView,ListView,
 
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-# from rest_framework.views import APIView
-# from rest_framework.response import Response
-# from rest_framework import status
-# from rest_framework import viewsets
-# from .serializers import PostSerializer,CommentSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework import viewsets
+from .serializers import PostSerializer,CommentSerializer
 
 # class PostList(APIView):
 
@@ -27,14 +27,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 #         pass
             
 
-# class PostView(viewsets.ModelViewSet):
-#     queryset = Post.objects.all()
-#     serializer_class = PostSerializer
+class PostView(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
 
 
-# class CommentView(viewsets.ModelViewSet):
-#     queryset = Comment.objects.all()
-#     serializer_class = CommentSerializer
+class CommentView(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 
 
 class AboutView(TemplateView):

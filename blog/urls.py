@@ -1,11 +1,11 @@
 from django.urls import path,include
 from . import views
 from rest_framework.urlpatterns import format_suffix_patterns
-# from rest_framework import routers
+from rest_framework import routers
 
-# router = routers.DefaultRouter()
-# router.register('post',views.PostView)
-# router.register('comment',views.CommentView)
+router = routers.DefaultRouter()
+router.register('post',views.PostView)
+router.register('comment',views.CommentView)
 
 
 
@@ -22,5 +22,5 @@ urlpatterns = [
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
     # path('postlist/',views.PostList.as_view()),
-    # path('postlist/',include(router.urls)),
+    path('postlist/',include(router.urls)),
 ]
