@@ -16,7 +16,7 @@ heroku==0.1.4
 idna==2.8
 misaka==2.1.1
 mysqlclient==1.4.6
-Pillow==6.2.1
+Pillow==8.1.1
 psycopg2==2.8.4
 pycparser==2.19
 python-dateutil==1.5
